@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Group Security - Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .logo { max-width: 150px; position: absolute; top: 10px; left: 10px; }
+        .header {
+            background: #1a1a1a;
+            color: #ffd700;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+            background: #1a1a1a;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .services, .vas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .service-box {
+            width: 30%;
+            height: 350px;
+            perspective: 1000px;
+            margin: 15px;
+        }
+        .service-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .service-box.flipped .service-inner {
+            transform: rotateY(180deg);
+        }
+        .service-front, .service-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+            padding: 10px;
+            background: #333;
+        }
+        .nav { background: #333; padding: 15px; text-align: center; }
+        .nav a { color: #ffd700; text-decoration: none; padding: 15px 25px; font-size: 18px; display: inline-block; }
+        .nav a:hover { color: #fff}
+        .service-front {
+            color: #ffd700;
+        }
+        .service-back {
+            background: #ffd700;
+            color: #000;
+            transform: rotateY(180deg);
+        }
+        .service-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .service-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .service-box i {
+            font-size: 40px;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .pricing {
+            margin-top: 40px;
+            padding: 20px;
+            background: #222;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .pricing h2 {
+            color: #ffd700;
+        }
+        .footer {
+            background: #333;
+            color: #ffd700;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .footer { background: #333; color: #ffd700; text-align: center; padding: 15px; margin-top: 20px; }
+        .footer-container { display: flex; justify-content: space-between; padding: 20px; max-width: 1100px; margin: auto; }
+        .footer-column { width: 30%; text-align: left; }
+        .footer a { color: #ffd700; text-decoration: none; display: block; }
+        .social-icons { text-align: left; margin-top: 10px; }
+        .social-icons a { display: inline-block; margin: 0 10px; color: #ffd700; font-size: 24px; text-decoration: none; }
+        .social-icons a:hover {color: #fff; /* White color on hover */}
+        .copyright { text-align: center; margin-top: 10px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="./Untitled design.png" alt="Blue Group Security Logo" class="logo"> <p>BLUE GROUP SECURITY</p> <P>Our Security Services</P>
+    </div>
+  
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Products & Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Client Login</a>
+    </div>
+
+    <div class="container">
+
+        <h2>Core Security Services</h2>
+        <div class="services">
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Physical Guarding</h3>
+                        <img src="./Slideshow/Guard back.jpg" alt="Guarding Service" class="service-img">
+                        <p>Professional guards securing your property.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Highly trained security officers ensuring protection for businesses, residential areas, and public spaces.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Patrols</h3>
+                        <img src="./Slideshow/Community patrol.jpg" alt="Community Patrols" class="service-img">
+                        <p>Regular patrols keeping your area safe.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Our patrols ensure proactive security, reducing crime and increasing community safety.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-bell"></i>
+                        <h3>Premises Alarms</h3>
+                        <img src="./Slideshow/BGS Car alone night.jpg" alt="Premises Alarms" class="service-img">
+                        <p>Advanced alarms with app access.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Our smart alarm systems provide real-time alerts and remote monitoring for enhanced security.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-bell"></i>
+                        <h3>Premises Alarms</h3>
+                        <img src="./Slideshow/thabo gun.jpg" alt="Commercial" class="service-img">
+                        <p>Advanced alarms with app access.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Our smart alarm systems provide real-time alerts and remote monitoring for enhanced security.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Escorting Services</h3>
+                        <video width="100%" height="150" controls>
+                            <source src="./Slideshow/Escort.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Safe transport of goods and personnel.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Our trained security teams ensure the safe escort of valuable items and personnel to their destinations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-video"></i>
+                        <h3>CCTV Installation & Surveillance</h3>
+                        <img src="./Slideshow/cctv.jpg" alt="CCTV Surveillance" class="service-img">
+                        <p>24/7 monitoring for maximum security.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>We install high-definition cameras with remote viewing and motion detection for ultimate surveillance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>Value-Added Services (VAS) - Free of Charge</h2>
+        <div class="vas">
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-heart"></i>
+                        <h3>Wellness Checks</h3>
+                        <p>Checking on vulnerable individuals.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Our team ensures the well-being of vulnerable members in the community with regular check-ins.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-box" onclick="flipCard(this)">
+                <div class="service-inner">
+                    <div class="service-front">
+                        <i class="fas fa-car"></i>
+                        <h3>Angel Guard</h3>
+                        <p>Security for broken-down vehicles.</p>
+                    </div>
+                    <div class="service-back">
+                        <p>Rapid response for motorists experiencing breakdowns, ensuring safety on the road.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pricing">
+            <h2>Pricing</h2>
+            <p><strong>Premises Alarms:</strong> From <b>R600/month</b></p>
+            <p><strong>CCTV Installation:</strong> From <b>R8000 once-off</b></p>
+            <p><strong>Guarding Services:</strong> Quoted on request</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="./Untitled design.png" alt="Blue Group Security Logo" width="150" height="150" >
+                <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Working Hours</h3>
+                <p>Admin Office: Mon-Fri: 9am - 5pm</p>
+                <p>Sat - Sun: Closed</p>
+                <p>Armed Response: 24/7</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><a href="services.html">info@bluegroupsecurity.co.za</a></p>
+                <p> <a href="services.html">+27 11 568 1274</a></p>
+                <p><a href="services.html">8168 Makhosomke Street, Diepkloof, Johannesburg</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <p><a href="services.html">Products & Services</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+                <p><a href="privacy.html">Privacy Policy</a></p>
+                <p><a href="terms.html">Terms & Conditions</a></p>
+                <p><a href="contact us.html">Check Your Area</a></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Blue Group Security. All rights reserved.</p>
+    </div>
+
+    <script>
+        function flipCard(element) {
+            element.classList.toggle('flipped');
+        }
+    </script>
+
+</body>
+</html>

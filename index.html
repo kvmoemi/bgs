@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Group Security</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #000; color: #fff; }
+        .header { background: #1a1a1a; color: #ffd700; padding: 20px; text-align: center; font-size: 28px; font-weight: bold; position: relative; }
+        .logo { max-width: 150px; position: absolute; top: 10px; left: 10px; }
+        .nav { background: #333; padding: 15px; text-align: center; }
+        .nav a { color: #ffd700; text-decoration: none; padding: 15px 25px; font-size: 18px; display: inline-block; }
+        .nav a:hover { color: #fff}
+        .slideshow-container { position: relative; width: 100%; height: 400px; overflow: hidden; }
+        .slide { position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease-in-out; }
+        .slide:nth-child(1) { height: 550px; }
+        .slide:nth-child(2) { height: 1200px; }
+        .slide:nth-child(3) { height: 800px; }
+        .slide:nth-child(4) { height: 400px; }
+        .active { opacity: 1; }
+        .container { padding: 40px; max-width: 1100px; margin: auto; background: #1a1a1a; border-radius: 10px; text-align: center; }
+        .features { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px; }
+        .feature-box { background: #333; padding: 20px; border-radius: 10px; width: 30%; margin-bottom: 20px; }
+        .faq { max-width: 800px; margin: 40px auto; }
+        .faq-item { background: #333; padding: 15px; border-radius: 10px; margin-bottom: 10px; }
+        .footer { background: #333; color: #ffd700; text-align: center; padding: 15px; margin-top: 20px; }
+        .footer-container { display: flex; justify-content: space-between; padding: 20px; max-width: 1100px; margin: auto; }
+        .footer-column { width: 30%; text-align: left; }
+        .footer a { color: #ffd700; text-decoration: none; display: block; }
+        .social-icons { margin-top: 10px; }
+        .social-icons a { margin: 0 10px; color: #ffd700; font-size: 24px; text-decoration: none; }
+        .copyright { text-align: center; margin-top: 10px; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
+    <div class="header">
+        <img src="./Untitled design.png" alt="Blue Group Security Logo" class="logo">
+        Blue Group Security
+    </div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Products & Services</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Client Login</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="slide active" style="background-image: url(./Slideshow/Group.jpg);" ></div>
+        <div class="slide" style="background-image: url(./Slideshow/Guard.jpg);"></div>
+        <div class="slide" style="background-image: url(./Slideshow/Guard\ back.jpg);"></div>
+        <div class="slide" style="background-image: url(./Slideshow/Cars.jpg);"></div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        function showNextSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+        setInterval(showNextSlide, 3000);
+    </script>
+    <div class="container">
+        <h1>Welcome to Blue Group Security</h1>     
+        <p>We provide professional security solutions tailored to safeguard your home, business, and community.</p>
+        <div class="features">
+            <div class="feature-box">
+                <h2>24/7 Security Patrols</h2>
+                <p>Vigilant patrolling to prevent criminal activities before they happen.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Rapid Armed Response</h2>
+                <p>Trained personnel ready to respond to threats within minutes.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Advanced CCTV Monitoring</h2>
+                <p>Real-time surveillance solutions for enhanced security.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Personal Security Escorts</h2>
+                <p>Professional security personnel to escort individuals safely.</p>
+            </div>
+        </div>
+    </div>
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item"><strong>Q: How do I sign up for security services?</strong><br>A: You can sign up online or contact our customer service.</div>
+        <div class="faq-item"><strong>Q: Do you offer armed response?</strong><br>A: Yes, we have a dedicated armed response team.</div>
+        <div class="faq-item"><strong>Q: Can I monitor my property remotely?</strong><br>A: Yes, we offer CCTV monitoring with remote access.</div>
+        <div class="faq-item"><strong>Q: What areas do you cover?</strong><br>A: Check our "See if we're in your area" section for coverage.</div>
+        <div class="faq-item"><strong>Q: How quickly do you respond to emergencies?</strong><br>A: Our average response time is under 5 minutes.</div>
+    </div>
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h2>27+</h2>
+                <p>Security Personnel</p>
+            </div>
+            <div class="stat-box">
+                <h2>12+</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <h2>784+</h2>
+                <p>Clients Protected</p>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .stats-section {
+            background: #1a1a1a;
+            padding: 40px 20px;
+            text-align: center;
+            color: #ffd700;}
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1100px;
+            margin: auto;}
+        .stat-box {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;}
+        .stat-box h2 {
+            font-size: 36px;
+            margin: 0;
+            color: #fff;}
+        .stat-box p {
+            margin: 5px 0 0;
+            font-size: 18px;}
+        .social-icons {
+            text-align: left;
+            margin-top: 10px;}
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #ffd700; /* Gold color */
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;}
+        .social-icons a:hover {color: #fff; /* White color on hover */}
+    </style>
+    
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="./Untitled design.png" alt="Blue Group Security Logo" width="150" height="150">
+                <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Working Hours</h3>
+                <p>Admin Office: Mon-Fri: 9am - 5pm</p>
+                <p>Sat - Sun: Closed</p>
+                <p>Armed Response: 24/7</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><a href="services.html">info@bluegroupsecurity.co.za</a></p>
+                <p> <a href="services.html">+27 11 568 1274</a></p>
+                <p><a href="services.html">8168 Makhosomke Street, Diepkloof, Johannesburg</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <p><a href="services.html">Products & Services</a></p>
+                <p><a href="about.html">About Us</a></p>
+                <p><a href="faq.html">FAQ</a></p>
+                <p><a href="privacy.html">Privacy Policy</a></p>
+                <p><a href="terms.html">Terms & Conditions</a></p>
+                <p><a href="contact us.html">Check Your Area</a></p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Blue Group Security. All rights reserved.</p>
+    </div>
+</body>
+</html>
